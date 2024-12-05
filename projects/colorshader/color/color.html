@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-vibrant/3.1.6/vibrant.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+      <div class="nav-Container">
+        <div class="links-container">
+            <h2>press the spacebar to generate color palettes!</h2>
+            <div class="links">
+                <div class="trigger-button" id="triggerButton">
+                    <p><img src="icons/camera-line.svg" alt=""></p>
+                </div>
+                <button id="screenshot-btn"><img src="icons/download-2-line.svg" alt=""></button>
+                <a  id="wishlist-btn">
+              <img src="icons/heart-line.svg" alt="" >
+                     </a>
+            </div>
+        </div>
+      </div>
+      
+        <div id="content-to-screenshot">
+            <!-- Content to capture -->
+             
+            <div id="color-container"></div>
+       
+        </div>
+        
+        <div id="wishlist-page" class="wishlist-page">
+            <h2>Your Wishlist</h2>
+            <div id="wishlist-container" class="wishlist-container"></div>
+            <button id="back-btn"><img src="icons/close-large-fill.svg" alt=""></button>
+        </div>
+
+        <div id="shade-container" class="hidden"></div> <!-- Hidden container for shades -->
+       <!-- image color extractor -->
+       <div class="main-container">
+        <!-- Trigger button to open the modal -->
+        
+
+        <!-- Modal for Drag & Drop, Upload, and URL -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <button class="close-button" id="closeButton"><img src="icons/close-large-fill.svg" alt=""></button>
+                <h2>Upload, Drag & Drop, or Paste URL</h2>
+                
+                
+                <!-- Upload button for selecting an image file -->
+                <input type="file" id="fileInput" class="file-input" accept="image/*">
+               
+
+                <!-- URL input area -->
+                <div class="url-input-container">
+                    <input type="text" id="urlInput" placeholder="Paste image URL here">
+                    <button class="url-button" id="urlButton"> <img src="icons/links-line.png" alt=""> Extract</button>
+                </div>
+                 <!-- Drag & Drop area -->
+                 <div class="drop-area" id="dragDropArea">
+                    <p>Drop an image here to extract colors!</p>
+                    <button class="upload-button" id="uploadButton"><img src="icons/upload-cloud-line.svg" alt=""></button>
+                </div>
+
+                <!-- Container to display image preview and extracted color boxes -->
+                <div class="image-and-color-container">
+                    <!-- Display selected or loaded image -->
+                    <div class="image-preview" id="imagePreview"></div>
+
+                    <!-- Display extracted color boxes -->
+                    <div class="color-display-container" id="colorDisplayContainer">
+                        <!-- Color boxes will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       <!-- image color extractor end -->
+    <script src="script.js"></script>
+    <script src="imagescript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+</body>
+</html>

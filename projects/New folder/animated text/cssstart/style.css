@@ -1,0 +1,34 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.page1{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+.box-container{
+    height: 100vh;
+    width: 100%;
+    background-color: salmon;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+h1{
+    font-size: 16vw;
+    text-transform: capitalize;
+    font-family: monospace;
+    transform: translateY(100%);
+}

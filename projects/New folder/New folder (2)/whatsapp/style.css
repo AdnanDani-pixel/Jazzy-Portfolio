@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    width: 100%;
+}
+.main-bg{
+    padding: 20px 20px;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+}
+.wrapper{
+    width: 99%;
+    height: 96vh;
+    background-color: red;
+    display: flex;
+}
+
+.side-bar{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 70px;
+    height: 100%;
+    background-color: #202C33;
+}
+.side-bar .icon{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wrapper .section-left{
+   width: 500px;
+   height: 100%;
+   background-color: #111B21;
+}
+
+.section-right{
+    width: 100%;
+    height: 100%;
+    background-color: #222E35;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-bar .icon img{
+   height: 20px;
+}
+
+.bottom-icons img{
+    height: 35px;
+    border-radius: 50px;
+}
+.bottom-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.section-left{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+
+}
+
+.section-left h2{
+    color: #fff;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-bottom: 120px;
+}
+.section-left .community h1{
+    font-size: 22px;
+    font-family: sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.section-left .community p{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section-left .community  {
+    text-align: center;
+}
+.section-left .community a{
+    color: #73F38F;
+}
+.btn{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+}
+.community button{
+    padding: 10px 40px;
+    background-color: #00A884;
+    color: #000;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
+
+
+.section-right .content img{
+    height: 200px;
+}
+
+.section-right .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.content h1{
+    color: #fff;
+    font-family: montserrat;
+    font-weight: 400;
+}
+.content p{
+    color: #fff;
+    text-align: center;
+}
+.content button{
+    padding: 10px 40px;
+    background-color: #00A884;
+    color: #000;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+}
+.section-right p{
+    margin-bottom: 50px;
+    color: #fff;
+}

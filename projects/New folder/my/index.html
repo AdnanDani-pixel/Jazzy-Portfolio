@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <title>Telegram Clicker Game</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Telegram Clicker Game</h1>
+    <p>Click count: <span id="count">0</span></p>
+    <button id="clickButton">Click Me!</button>
+  </div>
+
+  <script>
+    let count = 0;
+
+    // Initialize the Telegram SDK
+    window.Telegram.WebApp.ready();
+
+    // Show the Telegram Main Button
+    window.Telegram.WebApp.MainButton.setText("Send Score");
+    window.Telegram.WebApp.MainButton.show();
+
+    // Handle Main Button Click
+    window.Telegram.WebApp.onEvent('mainButtonClicked', () => {
+      // Send the score back to Telegram
+      window.Telegram.WebApp.sendData(`Score: ${count}`);
+    });
+
+    // Handle click on the game button
+    document.getElementById('clickButton').addEventListener('click', () => {
+      count += 1;
+      document.getElementById('count').textContent = count;
+    });
+  </script>
+</body>
+</html>

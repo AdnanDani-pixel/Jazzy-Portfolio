@@ -1,0 +1,202 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main{
+    width: 100%;
+}
+
+.popup{
+    padding: 13px 150px;
+    width: 100%;
+    background-color: #343A40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.email{
+    display: flex;
+    gap: 20px;
+}
+.email a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+.email a span{
+    color: #32DBC6;
+}
+.social{
+    display: flex;
+    gap: 20px;
+}
+.social i{
+    color: #32DBC6;
+    font-size: 15px;
+}
+.section-1{
+    height: 100vh;
+    width: 100%;
+    background-image: url(hero_1.jpg);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.para h1{ 
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 3vw;
+  font-family: sans-serif;
+}
+
+.para h3{
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+button{
+        outline: none;
+        border: none;
+        padding: 13px 13px;
+        border-radius: 50px;
+        background-color: #32DBC6;
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100vh;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 14px 14px;
+    transition: 0.3s;
+
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+    border-radius: 50px;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+    border-radius: 50px;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    height: 100%;
+    width: 30%;
+    background-color:#111B21;    
+  }
+
+  .search{
+    border: none;
+    outline: none;
+    padding: 20px 20px;
+  }
+  input{
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    border-radius: 50px;
+    background-color: #343A40;
+    margin-left: 50px;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .section-left{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+
+}
+
+.section-left h2{
+    color: #fff;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-bottom: 120px;
+}
+.section-left .community h1{
+    font-size: 22px;
+    font-family: sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.section-left .community p{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section-left .community  {
+    text-align: center;
+}
+.section-left .community a{
+    color: #73F38F;
+}
+.btn{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+}
+.chat-wrapper{
+    height: 100%;
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chat-wrapper .chat-content img{
+    height: 70px;
+    border-radius: 50px;
+}
+.chat-content{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.chat-content h3{
+    color: #fff;
+    font-size: 2vw;
+    text-transform: uppercase;
+}

@@ -1,0 +1,20 @@
+0. install Node.Js
+1. creat -vite@latest-app 
+2. UseState hook (Variables of react) and real DOM and Virtual DOM
+3. Calling functions in react
+4. Routes
+5. Breaking the components (importance of components)
+6. props (normal data, children)
+7. Tailwind Css installation
+8. Tailwind Use
+9. implimanting ajax in react (fetch/Axios)
+10. Gallery app using lorem pixum api 
+11. Showing flash message (react toastify)
+. Two way binding
+
+
+
+
+
+
+eqVrrx24WjiGxrap

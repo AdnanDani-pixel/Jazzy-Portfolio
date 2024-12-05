@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+            color: #61dafb;
+        }
+        .container {
+            background: #20232a;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 60px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #61dafb;
+            border-radius: 5px;
+            background: #282c34;
+            color: #61dafb;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #61dafb;
+            border: none;
+            border-radius: 5px;
+            color: #20232a;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #21a1f1;
+        }
+        .password {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333842;
+            border: 2px solid #61dafb;
+            border-radius: 5px;
+            color: #61dafb;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2em;
+            /* white-space: pre-wrap;
+            word-wrap: break-word; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Password Generator</h2>
+        <label for="length">Length:</label>
+        <input type="number" id="length" value="12" min="4" max="20">
+        <br>
+        <button onclick="generatePassword()">Generate Password</button>
+        <button onclick="copyPassword()">Copy Password</button>
+        <div class="password" id="password"></div>
+    </div>
+
+    <script>
+        function generatePassword (){
+            const length = document.getElementById("length").value;
+            if(length < 4){
+                alert("password lenght should be at least 4 characters.")
+                return;
+            
+            }
+
+            const lower = "abcdefghijklmnopqrstuvwxyz";
+            const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const digits = "0123456789";
+            const special = "!@#$^&*()_+-={}[];:',.<>?/~`";
+            let password = [
+                lower[Math.floor(Math.random() * lower.length)],
+                upper[Math.floor(Math.random() * upper.length)],
+                digits[Math.floor(Math.random() * digits.length)],
+                special[Math.floor(Math.random() * special.length)],
+            ];
+            const allCharacters = lower + upper + digits + special;
+            for(let i =4; i < length; i++){
+                password.push(allCharacters[Math.floor(Math.random() * allCharacters.length)]);
+            }
+            console.log(password);
+            document.getElementById('password').innerText= password.join('');
+        }
+        function copyPassword(){
+            const passwordText = document.getElementById('password').innerText;
+            if(!passwordText){
+                alert("No Password to copy");
+                return;
+            }
+            const textarea = document.createElement('textarea');
+            textarea.value=passwordText;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert("Password copied to clipboard");
+            
+        }
+        
+    </script>
+    <!-- <script>
+  
+        function copyPassword() {
+            const passwordText = document.getElementById('password').innerText;
+            if (!passwordText) {
+                alert("No password to copy!");
+                return;
+            }
+
+            const textarea = document.createElement('textarea');
+            textarea.value = passwordText;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            alert("Password copied to clipboard!");
+        }
+    </script> -->
+</body>
+</html>

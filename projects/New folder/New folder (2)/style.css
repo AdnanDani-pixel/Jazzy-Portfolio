@@ -1,0 +1,43 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main{
+  width: 100%;
+}
+section{
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;  
+  text-align: center;
+}
+
+.section-1{
+  background-image: url(family.jpg);
+  background-attachment: fixed;
+}
+.section-2{
+  background-image: url(family-day-2-1024x555.png);
+}
+.section-3{
+  background-image: url(fdb08e2e-5d39-402c-ad0c-8a3293301d9e.png);
+  background-attachment: fixed;
+}
+
+
+.txt{
+  width: 50%;
+}
+h1{
+  font-size: 3vw;
+  color: #fff;
+}
+p{
+  color:#fff;
+  font-size: 18px;
+}

@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+.colors-container, .shades-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.color-box, .shade-box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.copy-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"%3E%3Cpath d="M16 1H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h2v2H4v2h14v-2h-2v-2h2c1.1 0 2-.9 2-2V7l-6-6zM4 17h12V3.5L14.5 1H4v16zm8-11h4v2h-4V6zm0 4h4v2h-4v-2zm0 4h4v2h-4v-2zM8 6h2v10H8V6zm-4 0h2v10H4V6z"/%3E%3C/svg%3E') no-repeat center;
+    mask-size: contain;
+    cursor: pointer;
+}

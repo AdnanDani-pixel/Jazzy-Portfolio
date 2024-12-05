@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drage Elements</title>
+    <style>
+        .main{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            position: relative;
+            padding: 0 40px;
+            height: 100vh;
+            width: 95%;
+            background-color: #16AB59;
+            border-radius: 40px;
+        }
+        h1{
+            font-size: 2.8vw;
+            font-family: monospace;
+            color: #fff;
+            font-weight: 500;
+        }
+        .box{
+            /* position: absolute; */
+            height: 350px;
+            width: 350px;
+            background-color: #FFDA00;
+            border-radius: 20px;
+        }
+        .container .box:nth-child(2){
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            background-color: blue;
+        }
+        .container .box:nth-child(3){
+            position: absolute;
+            top: 60%;
+            left: 40%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="container">
+        <h1>Trusted by 50,00050,000+ creatives</h1>
+         <div id="box1" class="box">
+         </div>
+         <div id="box1" class="box">
+         </div>
+         <div id="box1" class="box">
+         </div>
+         <div id="box1" class="box">
+         </div>
+         <div id="box1" class="box">
+         </div>
+    </div>
+    <h1></h1>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js" integrity="sha512-G7Wpe/pbg+zjyyM9HgQY6kacLAy+580lmA8DUXmZtioTI5FkaCRoLOaCLoeblrZABs7KZFD03cfSV9j7nmwxfw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>
+</body>
+</html>
